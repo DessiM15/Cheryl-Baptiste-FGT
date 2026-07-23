@@ -70,8 +70,8 @@ const READS = [
   },
 ];
 
-export default function Quiz() {
-  const [answers, setAnswers] = useState<number[]>([]);
+export default function Quiz({ initialAnswers = [] }: { initialAnswers?: number[] }) {
+  const [answers, setAnswers] = useState<number[]>(initialAnswers);
   const done = answers.length === QUESTIONS.length;
   const total = answers.reduce((a, b) => a + b, 0);
   const read = READS.find((r) => total <= r.max) ?? READS[READS.length - 1];

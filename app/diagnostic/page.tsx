@@ -7,7 +7,15 @@ export const metadata: Metadata = {
     "Five questions, two minutes. A small taste of how FGT Solutions reads organizations — and where we'd look first in yours.",
 };
 
-export default function DiagnosticPage() {
+export default async function DiagnosticPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ a?: string }>;
+}) {
+  const { a } = await searchParams;
+  const n = Number(a);
+  const initial = [0, 1, 2].includes(n) ? [n] : [];
+
   return (
     <main>
       <section>
@@ -20,7 +28,7 @@ export default function DiagnosticPage() {
               You&apos;ll get a plain-language read at the end. No email required to see it.
             </p>
           </div>
-          <Quiz />
+          <Quiz initialAnswers={initial} />
         </div>
       </section>
     </main>

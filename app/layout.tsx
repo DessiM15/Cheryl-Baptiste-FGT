@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Mulish } from "next/font/google";
 import "./globals.css";
 import { LogoLockup } from "@/components/Logo";
+import MobileMenu from "@/components/MobileMenu";
 import PalettePill from "@/components/PalettePill";
 
 const serif = Playfair_Display({
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Start a conversation
               </a>
             </nav>
+            <MobileMenu />
           </div>
         </header>
 
