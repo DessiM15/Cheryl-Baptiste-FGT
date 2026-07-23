@@ -71,31 +71,32 @@ export default function Home() {
   return (
     <main>
       {/* ---------- hero ---------- */}
-      <section className="hero hero-photo">
+      <section className="hero hero-film">
         <div className="media" aria-hidden="true">
-          <Image src="/img/hero.jpg" alt="" fill priority sizes="100vw" style={{ objectFit: "cover" }} />
+          <video autoPlay muted loop playsInline poster="/img/montage-poster.jpg" preload="metadata">
+            <source src="/img/montage.mp4" type="video/mp4" />
+          </video>
         </div>
-        <div className="wrap">
-          <div className="plumb">
-            <PlumbMark height={150} />
+        <div className="wrap hero-stack">
+          <div className="hero-brand" aria-hidden="true">
+            <PlumbMark height={96} />
+            <span className="brand-word">FGT</span>
+            <span className="brand-sub">Solutions</span>
           </div>
-          <div>
-            <p className="eyebrow">People Strategy · Leadership Advisory · California</p>
-            <h1 style={{ marginTop: 14 }}>
-              We tell you the truth about <em>your organization.</em>
-            </h1>
-            <p className="lede">
-              FGT Solutions partners with founders, CEOs, and senior leaders at the moments that
-              matter — when growth, pressure, and people issues have outgrown the old way of doing
-              things. We listen at every level, make sense of the patterns, and say what we find.
-              Plainly.
-            </p>
-            <div className="cta-row">
-              <a className="btn on-dark" href="#contact">Start a conversation</a>
-              <a className="btn ghost-dark" href="/diagnostic">Take the 2-minute diagnostic</a>
-            </div>
+          <p className="eyebrow">People Strategy · Leadership Advisory · California</p>
+          <h1>
+            We tell you the truth about <em>your organization.</em>
+          </h1>
+          <p className="lede">
+            We partner with founders, CEOs, and senior leaders at the moments that matter — we
+            listen at every level, make sense of the patterns, and say what we find. Plainly.
+          </p>
+          <div className="cta-row">
+            <a className="btn on-dark" href="#contact">Start a conversation</a>
+            <a className="btn ghost-dark" href="/diagnostic">Take the 2-minute diagnostic</a>
           </div>
         </div>
+        <span className="scroll-cue" aria-hidden="true">Scroll</span>
       </section>
 
       {/* ---------- when leaders call ---------- */}
