@@ -8,6 +8,7 @@ const SUBSTACK = "https://substack.com/@cherylbaptiste";
 
 const SERVICES = [
   {
+    img: "/img/svc-diagnosis.jpg",
     title: "Organizational diagnosis & advisory",
     text: "A deep look at where things are breaking down — or about to — and honest guidance on what needs to change. We listen at every level before we say a word.",
     mark: (
@@ -19,6 +20,7 @@ const SERVICES = [
     ),
   },
   {
+    img: "/img/svc-coaching.jpg",
     title: "Leadership coaching & advisory",
     text: "One-on-one partnership with leaders who are ready to lead differently and want a trusted voice at their side — one that will tell them the truth, even when it's uncomfortable.",
     mark: (
@@ -29,6 +31,7 @@ const SERVICES = [
     ),
   },
   {
+    img: "/img/svc-team.jpg",
     title: "Team & manager work",
     text: "The hard conversations, facilitation, and practical tools that help teams and managers get unstuck — including the conversations everyone has been avoiding.",
     mark: (
@@ -40,6 +43,7 @@ const SERVICES = [
     ),
   },
   {
+    img: "/img/svc-fractional.jpg",
     title: "Fractional people leadership",
     text: "Senior-level people-strategy support without adding a full-time executive — for organizations that need experience, not headcount.",
     mark: (
@@ -149,18 +153,23 @@ export default function Home() {
               </p>
             </div>
           </Reveal>
-          <div className="svc-index">
-            {SERVICES.map((s, i) => (
-              <Reveal key={s.title} delay={i * 80}>
-                <div className="svc-item">
-                  <span className="num">0{i + 1}</span>
+        </div>
+        <div className="svc-strip">
+          {SERVICES.map((s, i) => (
+            <div key={s.title} className="svc-panel">
+              <div className="bg" aria-hidden="true">
+                <Image src={s.img} alt="" fill sizes="(max-width: 760px) 100vw, 25vw" style={{ objectFit: "cover" }} />
+              </div>
+              <Reveal delay={i * 90}>
+                <div className="content">
                   <div className="mark">{s.mark}</div>
                   <h3>{s.title}</h3>
+                  <span className="rule" aria-hidden="true" />
                   <p>{s.text}</p>
                 </div>
               </Reveal>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -168,11 +177,18 @@ export default function Home() {
       <section className="promise">
         <div className="wrap">
           <Reveal>
-            <blockquote>
-              We will tell you the truth. Clearly and without apology. <em>What happens next is
-              yours to decide.</em>
-            </blockquote>
-            <p className="attribution">The FGT commitment</p>
+            <div>
+              <blockquote>
+                We will tell you the truth. Clearly and without apology. <em>What happens next is
+                yours to decide.</em>
+              </blockquote>
+              <p className="attribution">The FGT commitment</p>
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="promise-img">
+              <Image src="/img/talk.jpg" alt="Two colleagues in honest conversation at a table" width={1600} height={1200} />
+            </div>
           </Reveal>
         </div>
       </section>

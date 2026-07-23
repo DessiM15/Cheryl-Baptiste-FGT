@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Mulish } from "next/font/google";
 import "./globals.css";
-import { LogoLockup } from "@/components/Logo";
-import MobileMenu from "@/components/MobileMenu";
+import SiteHeader from "@/components/SiteHeader";
 import PalettePill from "@/components/PalettePill";
 
 const serif = Playfair_Display({
@@ -79,21 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${serif.variable} ${sans.variable}`}>
-        <header className="site-header">
-          <div className="wrap">
-            <LogoLockup />
-            <nav className="main-nav" aria-label="Main">
-              <a href="/#services">What we do</a>
-              <a href="/#who">Who it&apos;s for</a>
-              <a href="/#about">About Cheryl</a>
-              <a href="/diagnostic">The Diagnostic</a>
-              <a className="btn quiet" href="/#contact" style={{ padding: "10px 18px" }}>
-                Start a conversation
-              </a>
-            </nav>
-            <MobileMenu />
-          </div>
-        </header>
+        <SiteHeader />
 
         {children}
 
