@@ -3,8 +3,76 @@ import { PlumbMark } from "@/components/Logo";
 import LeadForm from "@/components/LeadForm";
 import Reveal from "@/components/Reveal";
 import DiagnosticLead from "@/components/DiagnosticLead";
+import StickyDiag from "@/components/StickyDiag";
 
 const SUBSTACK = "https://substack.com/@cherylbaptiste";
+
+const PROCESS = [
+  {
+    n: "01",
+    title: "We listen",
+    text: "At every level — leadership, managers, the people doing the work. Not a survey. Real conversations, in confidence.",
+  },
+  {
+    n: "02",
+    title: "We read the pattern",
+    text: "What's actually happening, where it started, and what it's costing you — separated from what the org chart says should be happening.",
+  },
+  {
+    n: "03",
+    title: "We say it plainly",
+    text: "The truth, clearly and without apology. What's working, what's broken, and what's behind it — in language everyone understands.",
+  },
+  {
+    n: "04",
+    title: "You decide",
+    text: "A clear picture and a practical path. Whether we implement it together or you take it from here — that call is always yours.",
+  },
+];
+
+const STATS = [
+  { big: "25+", small: "years in human resources" },
+  { big: "15+", small: "years leading HR teams" },
+  { big: "Nonprofit → Fortune 50", small: "range of organizations shaped" },
+  { big: "2022", small: "founded · full-time since 2025" },
+];
+
+const FAQS = [
+  {
+    q: "How is this different from an engagement survey?",
+    a: "A survey averages people into charts and tells you engagement is 'down 4%.' We sit with your people at every level and find out why — then say it plainly. Surveys measure the temperature; we find the source of the fever.",
+  },
+  {
+    q: "Do you replace our HR team?",
+    a: "No. We work alongside the team you have — and when you don't have senior people leadership, fractional support fills that seat without adding headcount. If your HR team is part of what we find, we'll say that too — to them, respectfully, and to you, plainly.",
+  },
+  {
+    q: "What does an engagement actually look like?",
+    a: "It starts with an honest conversation about what you're seeing — no pitch deck. From there, the work is scoped to what your organization actually needs: a diagnostic, leadership coaching, team and manager work, or fractional people leadership. No prepackaged methodology.",
+  },
+  {
+    q: "How do you handle confidentiality?",
+    a: "People tell us the truth because it's safe to. What individuals share is never attributed — we synthesize the pattern, protect the sources, and report what the organization needs to hear, not who said it.",
+  },
+  {
+    q: "What size organizations do you work with?",
+    a: "Cheryl has shaped people strategy everywhere from small nonprofits to Fortune 50 corporations. Strong leadership and sound people decisions transcend industry — and size.",
+  },
+  {
+    q: "What if you find something we don't want to hear?",
+    a: "Then the engagement is working. We will tell you the truth, clearly and without apology — what happens next is yours to decide. Leaders don't hire us to be comfortable; they hire us to be right.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 
 const SERVICES = [
   {
@@ -193,6 +261,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- how it works ---------- */}
+      <section id="process">
+        <div className="wrap">
+          <Reveal>
+            <div className="sec-head">
+              <p className="eyebrow">How it works</p>
+              <h2>The first 30 days.</h2>
+              <p>No black box, no jargon. This is what actually happens when you bring us in.</p>
+            </div>
+          </Reveal>
+          <div className="process-grid">
+            {PROCESS.map((p, i) => (
+              <Reveal key={p.n} delay={i * 90}>
+                <div className="process-step">
+                  <span className="num">{p.n}</span>
+                  <h3>{p.title}</h3>
+                  <p>{p.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- proof ---------- */}
+      <section className="tinted proof-band">
+        <div className="wrap">
+          <div className="proof-grid">
+            {STATS.map((s, i) => (
+              <Reveal key={s.small} delay={i * 80}>
+                <div className="stat">
+                  <span className="big">{s.big}</span>
+                  <span className="small">{s.small}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ---------- who it's for ---------- */}
       <section id="who">
         <div className="wrap">
@@ -315,6 +423,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- faq ---------- */}
+      <section id="faq">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        <div className="wrap">
+          <Reveal>
+            <div className="sec-head">
+              <p className="eyebrow">Fair questions</p>
+              <h2>Asked before, answered plainly.</h2>
+            </div>
+          </Reveal>
+          <div className="faq-list">
+            {FAQS.map((f, i) => (
+              <Reveal key={f.q} delay={i * 60}>
+                <details className="faq-item">
+                  <summary>
+                    {f.q}
+                    <span className="faq-mark" aria-hidden="true" />
+                  </summary>
+                  <p>{f.a}</p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ---------- contact ---------- */}
       <section className="tinted" id="contact">
         <div className="wrap contact-grid">
@@ -348,6 +482,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <StickyDiag />
     </main>
   );
 }
