@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { PlumbMark } from "@/components/Logo";
 import LeadForm from "@/components/LeadForm";
 import Reveal from "@/components/Reveal";
 import DiagnosticLead from "@/components/DiagnosticLead";
@@ -11,22 +10,22 @@ const PROCESS = [
   {
     n: "01",
     title: "We listen",
-    text: "At every level — leadership, managers, the people doing the work. Not a survey. Real conversations, in confidence.",
+    text: "At every level: leadership, managers, the people doing the work. Not a survey. Real conversations, in confidence.",
   },
   {
     n: "02",
     title: "We read the pattern",
-    text: "What's actually happening, where it started, and what it's costing you — separated from what the org chart says should be happening.",
+    text: "What's actually happening, where it started, and what it's costing you, separated from what the org chart says should be happening.",
   },
   {
     n: "03",
     title: "We say it plainly",
-    text: "The truth, clearly and without apology. What's working, what's broken, and what's behind it — in language everyone understands.",
+    text: "The truth, clearly and without apology. What's working, what's broken, and what's behind it, in language everyone understands.",
   },
   {
     n: "04",
     title: "You decide",
-    text: "A clear picture and a practical path. Whether we implement it together or you take it from here — that call is always yours.",
+    text: "A clear picture and a practical path. Whether we implement it together or you take it from here, that call is always yours.",
   },
 ];
 
@@ -40,27 +39,27 @@ const STATS = [
 const FAQS = [
   {
     q: "How is this different from an engagement survey?",
-    a: "A survey averages people into charts and tells you engagement is 'down 4%.' We sit with your people at every level and find out why — then say it plainly. Surveys measure the temperature; we find the source of the fever.",
+    a: "A survey averages people into charts and tells you engagement is 'down 4%.' We sit with your people at every level and find out why, then say it plainly. Surveys measure the temperature; we find the source of the fever.",
   },
   {
     q: "Do you replace our HR team?",
-    a: "No. We work alongside the team you have — and when you don't have senior people leadership, fractional support fills that seat without adding headcount. If your HR team is part of what we find, we'll say that too — to them, respectfully, and to you, plainly.",
+    a: "No. We work alongside the team you have. When you don't have senior people leadership, fractional support fills that seat without adding headcount. If your HR team is part of what we find, we'll say that too: to them, respectfully, and to you, plainly.",
   },
   {
     q: "What does an engagement actually look like?",
-    a: "It starts with an honest conversation about what you're seeing — no pitch deck. From there, the work is scoped to what your organization actually needs: a diagnostic, leadership coaching, team and manager work, or fractional people leadership. No prepackaged methodology.",
+    a: "It starts with an honest conversation about what you're seeing, with no pitch deck. From there, the work is scoped to what your organization actually needs: a diagnostic, leadership coaching, team and manager work, or fractional people leadership. No prepackaged methodology.",
   },
   {
     q: "How do you handle confidentiality?",
-    a: "People tell us the truth because it's safe to. What individuals share is never attributed — we synthesize the pattern, protect the sources, and report what the organization needs to hear, not who said it.",
+    a: "People tell us the truth because it's safe to. What individuals share is never attributed. We synthesize the pattern, protect the sources, and report what the organization needs to hear, not who said it.",
   },
   {
     q: "What size organizations do you work with?",
-    a: "Cheryl has shaped people strategy everywhere from small nonprofits to Fortune 50 corporations. Strong leadership and sound people decisions transcend industry — and size.",
+    a: "Cheryl has shaped people strategy everywhere from small nonprofits to Fortune 50 corporations. Strong leadership and sound people decisions transcend industry, and size too.",
   },
   {
     q: "What if you find something we don't want to hear?",
-    a: "Then the engagement is working. We will tell you the truth, clearly and without apology — what happens next is yours to decide. Leaders don't hire us to be comfortable; they hire us to be right.",
+    a: "Then the engagement is working. We will tell you the truth, clearly and without apology. What happens next is yours to decide. Leaders don't hire us to be comfortable; they hire us to be right.",
   },
 ];
 
@@ -78,7 +77,7 @@ const SERVICES = [
   {
     img: "/img/svc-diagnosis.jpg",
     title: "Organizational diagnosis & advisory",
-    text: "A deep look at where things are breaking down — or about to — and honest guidance on what needs to change. We listen at every level before we say a word.",
+    text: "A deep look at where things are breaking down, or about to, and honest guidance on what needs to change. We listen at every level before we say a word.",
     mark: (
       <svg width="34" height="26" viewBox="0 0 56 34" aria-hidden="true">
         <line x1="0" y1="5" x2="56" y2="5" strokeWidth="3" stroke="currentColor" />
@@ -90,7 +89,7 @@ const SERVICES = [
   {
     img: "/img/svc-coaching.jpg",
     title: "Leadership coaching & advisory",
-    text: "One-on-one partnership with leaders who are ready to lead differently and want a trusted voice at their side — one that will tell them the truth, even when it's uncomfortable.",
+    text: "One-on-one partnership with leaders who are ready to lead differently and want a trusted voice at their side, one that will tell them the truth, even when it's uncomfortable.",
     mark: (
       <svg width="14" height="30" viewBox="0 0 20 84" aria-hidden="true">
         <line x1="10" y1="2" x2="10" y2="62" strokeWidth="4" stroke="currentColor" />
@@ -101,7 +100,7 @@ const SERVICES = [
   {
     img: "/img/svc-team.jpg",
     title: "Team & manager work",
-    text: "The hard conversations, facilitation, and practical tools that help teams and managers get unstuck — including the conversations everyone has been avoiding.",
+    text: "The hard conversations, facilitation, and practical tools that help teams and managers get unstuck, including the conversations everyone has been avoiding.",
     mark: (
       <svg width="38" height="20" viewBox="0 0 80 36" aria-hidden="true">
         <line x1="4" y1="8" x2="76" y2="8" strokeWidth="4" stroke="currentColor" />
@@ -113,7 +112,7 @@ const SERVICES = [
   {
     img: "/img/svc-fractional.jpg",
     title: "Fractional people leadership",
-    text: "Senior-level people-strategy support without adding a full-time executive — for organizations that need experience, not headcount.",
+    text: "Senior-level people-strategy support without adding a full-time executive, for organizations that need experience, not headcount.",
     mark: (
       <svg width="34" height="22" viewBox="0 0 80 44" aria-hidden="true">
         <line x1="6" y1="40" x2="74" y2="40" strokeWidth="4" stroke="currentColor" />
@@ -129,13 +128,13 @@ const ESSAYS = [
     title: "HR Has Become a Bad Word. And We Did That to Ourselves.",
     date: "June 22, 2026",
     excerpt:
-      "Some of the reputation is deserved — and honesty matters more than defensiveness. On the professionals who held the line, and what the work was actually supposed to be.",
+      "Some of the reputation is deserved, and honesty matters more than defensiveness. On the professionals who held the line, and what the work was actually supposed to be.",
   },
   {
     title: "We Don't Hate Our Jobs. We Hate What Our Jobs Have Become.",
     date: "June 15, 2026",
     excerpt:
-      "The best people aren't burning out — they're grieving what the work was supposed to be. On the pattern nobody is naming out loud.",
+      "The best people aren't burning out. They're grieving what the work was supposed to be. On the pattern nobody is naming out loud.",
   },
 ];
 
@@ -150,17 +149,12 @@ export default function Home() {
           </video>
         </div>
         <div className="wrap hero-stack">
-          <div className="hero-brand" aria-hidden="true">
-            <PlumbMark height={96} />
-            <span className="brand-word">FGT</span>
-            <span className="brand-sub">Solutions</span>
-          </div>
           <p className="eyebrow">People Strategy · Leadership Advisory · California</p>
           <h1>
             We tell you the truth about <em>your organization.</em>
           </h1>
           <p className="lede">
-            We partner with founders, CEOs, and senior leaders at the moments that matter — we
+            We partner with founders, CEOs, and senior leaders at the moments that matter. We
             listen at every level, make sense of the patterns, and say what we find. Plainly.
           </p>
           <div className="cta-row">
@@ -188,7 +182,7 @@ export default function Home() {
                 <p>
                   A struggling team. A leadership gap. A culture that&apos;s quietly breaking down.
                   Engagement is low, tension is high, and the usual fixes haven&apos;t worked. You
-                  need someone who will find what&apos;s actually happening — not what a slide deck
+                  need someone who will find what&apos;s actually happening, not what a slide deck
                   says should be happening.
                 </p>
               </div>
@@ -200,7 +194,7 @@ export default function Home() {
                 <p>
                   New funding. Rapid growth. A strategic shift that will change how everyone works.
                   You&apos;re building fast and you want the people foundation strong enough for the
-                  vision to actually scale — before the cracks appear, not after.
+                  vision to actually scale, before the cracks appear, not after.
                 </p>
               </div>
             </Reveal>
@@ -318,7 +312,7 @@ export default function Home() {
                 haven&apos;t worked.
               </li>
               <li>
-                Leaders who want someone who will tell them the truth clearly — even when it&apos;s
+                Leaders who want someone who will tell them the truth clearly, even when it&apos;s
                 uncomfortable.
               </li>
               <li>
@@ -378,33 +372,24 @@ export default function Home() {
 
       {/* ---------- about ---------- */}
       <section id="about">
-        <div className="wrap about-grid">
+        <div className="wrap">
           <Reveal>
-            <div className="portrait">
-              <Image
-                src="/cheryl.png"
-                alt="Cheryl Baptiste, founder and principal of FGT Solutions"
-                width={680}
-                height={1020}
-              />
-            </div>
-          </Reveal>
-          <Reveal delay={110}>
-            <div className="bio">
-              <p className="eyebrow">The person behind the firm</p>
-              <h2>Cheryl Baptiste</h2>
+            <div className="bio bio-solo">
+              <p className="eyebrow">Behind the firm</p>
+              <h2>Led by Cheryl Baptiste</h2>
               <p>
-                Cheryl is the founder and principal of FGT Solutions. With more than 25 years in
-                human resources and over 15 in HR leadership, she has shaped people strategy across
-                organizations from small nonprofits to Fortune 50 corporations — spanning talent,
-                engagement, learning and development, and DEI, both nationally and internationally.
+                FGT Solutions was founded by Cheryl Baptiste, its principal. With more than 25
+                years in human resources and over 15 in HR leadership, she has shaped people
+                strategy across organizations from small nonprofits to Fortune 50 corporations,
+                spanning talent, engagement, learning and development, and DEI, both nationally
+                and internationally.
               </p>
               <p>
                 A self-described grassroots, nontraditional HR leader, she built her expertise from
                 the ground up across technology, sales, distribution, property management, and
-                beauty — a breadth that reflects her belief that strong leadership and sound people
-                decisions transcend industry. She founded FGT Solutions in 2022 and has run it full
-                time since 2025.
+                beauty. That breadth reflects the firm&apos;s belief that strong leadership and
+                sound people decisions transcend industry. She founded FGT Solutions in 2022 and
+                has run it full time since 2025.
               </p>
               <p>
                 She also writes candidly about work, leadership, and the journey from employee to
@@ -466,7 +451,7 @@ export default function Home() {
                 Tell us what you&apos;re seeing.
               </h2>
               <p style={{ color: "var(--ink-soft)", marginTop: 16, maxWidth: "44ch" }}>
-                No pitch deck on the first call — just an honest conversation about what&apos;s
+                No pitch deck on the first call. Just an honest conversation about what&apos;s
                 happening and whether we&apos;re the right people to help. If we&apos;re not,
                 we&apos;ll say that too.
               </p>

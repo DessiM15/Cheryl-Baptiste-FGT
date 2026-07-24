@@ -10,18 +10,18 @@ const QUESTIONS: Question[] = [
   {
     q: "When something goes wrong in your organization, how do you usually find out?",
     options: [
-      { text: "People tell me directly — early, and to my face.", score: 0 },
+      { text: "People tell me directly, early, and to my face.", score: 0 },
       { text: "It reaches me eventually, usually softened along the way.", score: 1 },
       { text: "I find out late, sideways, or from the numbers.", score: 2 },
     ],
     notes: [
-      "Noted — truth still travels to you.",
-      "Noted — truth arrives, but filtered.",
-      "Noted — the truth is routing around you.",
+      "Noted: truth still travels to you.",
+      "Noted: truth arrives, but filtered.",
+      "Noted: the truth is routing around you.",
     ],
   },
   {
-    q: "Your best people — the ones who care the most. How are they doing?",
+    q: "Your best people, the ones who care the most. How are they doing?",
     options: [
       { text: "Energized. They talk about the work like they own it.", score: 0 },
       { text: "Showing up, but the spark is quieter than it used to be.", score: 1 },
@@ -37,34 +37,34 @@ const QUESTIONS: Question[] = [
     q: "When your leadership team disagrees, what actually happens?",
     options: [
       { text: "It gets argued openly, decided, and everyone commits.", score: 0 },
-      { text: "It gets discussed — then relitigated in hallways afterward.", score: 1 },
+      { text: "It gets discussed, then relitigated in hallways afterward.", score: 1 },
       { text: "It doesn't surface. The real conversation happens elsewhere.", score: 2 },
     ],
     notes: [
       "Conflict happens in the room. That's health.",
-      "Decided, then relitigated — the classic pattern.",
+      "Decided, then relitigated. The classic pattern.",
       "The real meeting is happening after the meeting.",
     ],
   },
   {
-    q: "The hard conversations — performance, conflict, behavior. Are they happening?",
+    q: "The hard conversations: performance, conflict, behavior. Are they happening?",
     options: [
       { text: "Yes, by the managers who should be having them.", score: 0 },
-      { text: "Sometimes — usually later than they should.", score: 1 },
+      { text: "Sometimes, usually later than they should.", score: 1 },
       { text: "They get avoided, delegated, or handled by workaround.", score: 2 },
     ],
     notes: [
       "Your managers are doing their own hard work.",
-      "Later than it should be — and the cost compounds.",
+      "Later than it should be, and the cost compounds.",
       "Avoidance has quietly become the system.",
     ],
   },
   {
     q: "If growth doubled next quarter, would your people foundation hold?",
     options: [
-      { text: "Yes — roles, managers, and culture would flex and hold.", score: 0 },
+      { text: "Yes. Roles, managers, and culture would flex and hold.", score: 0 },
       { text: "Parts would hold. Parts would crack. I know which.", score: 1 },
-      { text: "Honestly, I don't know — and that worries me.", score: 2 },
+      { text: "Honestly, I don't know, and that worries me.", score: 2 },
     ],
     notes: [
       "You know your foundation. Rare.",
@@ -80,21 +80,21 @@ const READS = [
     zone: "Holding",
     title: "The foundation is holding. Protect it on purpose.",
     read:
-      "Truth travels to you, your best people still care out loud, and hard conversations happen. That's rarer than you think — and it usually erodes quietly, not dramatically. The organizations that keep it treat culture as something they maintain, not something they have. This is the moment proactive work is cheapest.",
+      "Truth travels to you, your best people still care out loud, and hard conversations happen. That's rarer than you think, and it usually erodes quietly, not dramatically. The organizations that keep it treat culture as something they maintain, not something they have. This is the moment proactive work is cheapest.",
   },
   {
     max: 6,
     zone: "Softening",
     title: "The early pattern is here. You're catching it in time.",
     read:
-      "Something has started to soften — the truth arrives filtered, the spark is dimmer, decisions get relitigated in hallways. None of it looks like a crisis yet, which is exactly why it gets ignored. What you're describing is how every culture problem starts: slowly, politely, and in ways the usual fixes don't touch.",
+      "Something has started to soften. The truth arrives filtered, the spark is dimmer, decisions get relitigated in hallways. None of it looks like a crisis yet, which is exactly why it gets ignored. What you're describing is how every culture problem starts: slowly, politely, and in ways the usual fixes don't touch.",
   },
   {
     max: 10,
     zone: "Speaking",
     title: "You already know. It's time someone said it out loud.",
     read:
-      "Truth reaches you late, your best people are going quiet, and the real conversations are happening somewhere you're not. You don't need another engagement survey — you need someone to listen at every level, name what's actually happening, and tell you plainly. That is precisely the work we do.",
+      "Truth reaches you late, your best people are going quiet, and the real conversations are happening somewhere you're not. You don't need another engagement survey. You need someone to listen at every level, name what's actually happening, and tell you plainly. That is precisely the work we do.",
   },
 ];
 
@@ -254,7 +254,7 @@ export default function Quiz({ initialAnswers = [] }: { initialAnswers?: number[
             )}
             <p className="note">
               {idx === 0
-                ? "Five questions, two minutes — no email required to see your read. Keys 1–3 work too."
+                ? "Five questions, two minutes, no email required to see your read. Keys 1-3 work too."
                 : null}
             </p>
           </>

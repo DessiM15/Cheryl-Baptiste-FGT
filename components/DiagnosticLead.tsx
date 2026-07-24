@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 
 const OPTIONS = [
-  { text: "People tell me directly — early, and to my face.", score: 0 },
+  { text: "People tell me directly, early, and to my face.", score: 0 },
   { text: "It reaches me eventually, usually softened along the way.", score: 1 },
   { text: "I find out late, sideways, or from the numbers.", score: 2 },
 ];
@@ -29,7 +29,7 @@ export default function DiagnosticLead() {
         ))}
       </div>
       <p className="note">
-        Answer to continue — five questions, two minutes, and no email required to see your read.
+        Answer to continue. Five questions, two minutes, and no email required to see your read.
       </p>
     </div>
   );

@@ -11,10 +11,10 @@ const TRIGGERS = [
   "New funding · growing fast",
   "Engagement is sliding",
   "Something feels off I can't name",
-  "Nothing's wrong — getting ahead of it",
+  "Nothing's wrong, getting ahead of it",
 ];
 const DURATIONS = ["Weeks", "Months", "Over a year"];
-const SIZES = ["Under 25 people", "25–100", "100–500", "500+"];
+const SIZES = ["Under 25 people", "25-100", "100-500", "500+"];
 const SEATS = ["Founder · CEO", "People · HR leader", "Other executive", "Board"];
 const TRIED = ["Engagement survey", "Coaching", "Reorg", "New hires", "Nothing yet"];
 const READINESS = [
@@ -81,15 +81,15 @@ export default function LeadForm({ context }: { context?: string }) {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: "New qualified inquiry — fgtsco.com",
+          subject: "New qualified inquiry · fgtsco.com",
           from_name: "FGT Solutions website",
           ...basics,
-          reached_out_because: trigger.join("; ") || "—",
-          going_on_for: duration.join("; ") || "—",
-          company_size: size.join("; ") || "—",
-          their_seat: seat.join("; ") || "—",
-          already_tried: tried.join("; ") || "—",
-          readiness: readiness.join("; ") || "—",
+          reached_out_because: trigger.join("; ") || "not answered",
+          going_on_for: duration.join("; ") || "not answered",
+          company_size: size.join("; ") || "not answered",
+          their_seat: seat.join("; ") || "not answered",
+          already_tried: tried.join("; ") || "not answered",
+          readiness: readiness.join("; ") || "not answered",
           the_unsaid_thing: message,
           ...(context ? { diagnostic_context: context } : {}),
         }),
@@ -107,7 +107,7 @@ export default function LeadForm({ context }: { context?: string }) {
         <p className="sent-title">Received.</p>
         <p className="form-status" role="status">
           Cheryl reads every one of these herself. If it looks like a fit, you&apos;ll hear back
-          quickly — and if we&apos;re not the right people, we&apos;ll tell you that too.
+          quickly. If we&apos;re not the right people, we&apos;ll tell you that too.
         </p>
       </div>
     );
@@ -183,7 +183,7 @@ export default function LeadForm({ context }: { context?: string }) {
               id="lf-msg"
               rows={4}
               required
-              placeholder="Say it plainly — that's how we work here."
+              placeholder="Say it plainly. That's how we work here."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />

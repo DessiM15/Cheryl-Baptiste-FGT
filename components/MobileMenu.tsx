@@ -6,7 +6,7 @@ const LINKS = [
   { href: "/#services", label: "What we do" },
   { href: "/#who", label: "Who it's for" },
   { href: "/#writing", label: "From Cheryl's desk" },
-  { href: "/#about", label: "About Cheryl" },
+  { href: "/#about", label: "Behind the firm" },
   { href: "/diagnostic", label: "The Diagnostic" },
 ];
 

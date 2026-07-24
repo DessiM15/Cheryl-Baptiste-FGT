@@ -174,11 +174,9 @@ section { padding-block: clamp(56px, 9vh, 96px); }
 .diag-teaser p { color: var(--ink-soft); max-width: 52ch; margin-top: 12px; }
 
 /* ---------- about ---------- */
-.about-grid { display: grid; grid-template-columns: 340px 1fr; gap: 52px; align-items: start; }
-@media (max-width: 820px) { .about-grid { grid-template-columns: 1fr; max-width: 480px; } }
-.portrait { border-radius: 3px; overflow: hidden; border: 1px solid var(--hairline); }
-.about-grid h2 { font-family: var(--font-serif), Georgia, serif; font-weight: 400; font-size: clamp(28px, 4vw, 40px); margin-top: 12px; }
-.about-grid .bio p { color: var(--ink-soft); margin-top: 16px; font-size: 15.5px; }
+.bio-solo { max-width: 62ch; margin: 0 auto; }
+.bio-solo h2 { font-family: var(--font-serif), Georgia, serif; font-weight: 400; font-size: clamp(28px, 4vw, 40px); margin-top: 12px; }
+.bio-solo p { color: var(--ink-soft); margin-top: 16px; font-size: 15.5px; }
 .text-link { color: var(--deep); font-weight: 600; text-decoration: none; border-bottom: 1.5px solid var(--accent); padding-bottom: 1px; }
 .text-link:hover { color: var(--accent); }
 
@@ -285,16 +283,6 @@ section { padding-block: clamp(56px, 9vh, 96px); }
   display: flex; flex-direction: column; align-items: center; text-align: center;
   gap: 20px; max-width: 880px;
 }
-.hero-brand { display: flex; flex-direction: column; align-items: center; gap: 2px; margin-bottom: 6px; }
-.hero-brand .brand-word {
-  font-family: var(--font-serif), Georgia, serif; font-weight: 400;
-  font-size: clamp(30px, 3.4vw, 44px); letter-spacing: .34em; text-indent: .34em;
-  color: var(--on-deep); margin-top: 14px; line-height: 1;
-}
-.hero-brand .brand-sub {
-  font-size: 10px; letter-spacing: .5em; text-indent: .5em; text-transform: uppercase;
-  color: var(--on-deep-soft); font-weight: 700;
-}
 .hero-film h1 {
   font-size: clamp(38px, 5.6vw, 64px); max-width: 20ch;
 }
@@ -302,8 +290,7 @@ section { padding-block: clamp(56px, 9vh, 96px); }
 .hero-film .eyebrow { color: var(--on-deep-soft); }
 .hero-film .lede { color: var(--on-deep-soft); margin-top: 0; max-width: 52ch; font-size: clamp(15px, 1.8vw, 18px); }
 .hero-film .cta-row { margin-top: 12px; justify-content: center; }
-.hero-film .plumb line, .hero-brand svg line { stroke: var(--on-deep-soft); }
-.hero-brand svg circle { fill: var(--on-deep); }
+.hero-film .plumb line { stroke: var(--on-deep-soft); }
 .scroll-cue {
   position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 2;
   font-size: 10px; letter-spacing: .34em; text-transform: uppercase;
