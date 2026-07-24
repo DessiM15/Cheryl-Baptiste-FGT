@@ -123,6 +123,17 @@ const SERVICES = [
   },
 ];
 
+const CLIENTS = [
+  { name: "Best Cheer Stone", meta: "Manufacturing · Global" },
+  { name: "God Can Supply Co.", meta: "Apparel manufacturing · Memphis" },
+  { name: "Bixby Castle Holdings", meta: "Real estate · Tennessee" },
+  { name: "Jimenez Bros. 901", meta: "Construction · Memphis" },
+  { name: "Relevent Content Media", meta: "Brand marketing · Los Angeles" },
+  { name: "Action Factory", meta: "Digital production · Los Angeles" },
+  { name: "Misty Copeland Foundation", meta: "Access to the arts · Nonprofit" },
+  { name: "Consumer Care, Inc.", meta: "Residential care services" },
+];
+
 const ESSAYS = [
   {
     title: "HR Has Become a Bad Word. And We Did That to Ourselves.",
@@ -288,6 +299,29 @@ export default function Home() {
                 <div className="stat">
                   <span className="big">{s.big}</span>
                   <span className="small">{s.small}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- clients ---------- */}
+      <section id="clients">
+        <div className="wrap">
+          <Reveal>
+            <div className="sec-head">
+              <p className="eyebrow">In good company</p>
+              <h2>Organizations that wanted the truth.</h2>
+              <p>A selection of current clients, across industries and coasts.</p>
+            </div>
+          </Reveal>
+          <div className="client-grid">
+            {CLIENTS.map((c, i) => (
+              <Reveal key={c.name} delay={i * 60}>
+                <div className="client-cell">
+                  <span className="c-name">{c.name}</span>
+                  <span className="c-meta">{c.meta}</span>
                 </div>
               </Reveal>
             ))}
