@@ -23,8 +23,8 @@ export default function SiteHeader() {
       <div className="wrap">
         <LogoLockup />
         <nav className="main-nav" aria-label="Main">
-          <a href="/#services">What we do</a>
-          <a href="/#who">Who it&apos;s for</a>
+          <a href="/#services">How we help</a>
+          <a href="/#who">Who it&rsquo;s for</a>
           <a href="/#about">Behind the firm</a>
           <a href="/diagnostic">The Diagnostic</a>
           <a className="btn quiet" href="/#contact" style={{ padding: "10px 18px" }}>

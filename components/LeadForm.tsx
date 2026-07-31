@@ -10,16 +10,16 @@ const TRIGGERS = [
   "Conflict at the leadership level",
   "New funding · growing fast",
   "Engagement is sliding",
-  "Something feels off I can't name",
-  "Nothing's wrong, getting ahead of it",
+  "Something feels off I can’t name",
+  "Nothing’s wrong, getting ahead of it",
 ];
 const DURATIONS = ["Weeks", "Months", "Over a year"];
 const SIZES = ["Under 25 people", "25-100", "100-500", "500+"];
 const SEATS = ["Founder · CEO", "People · HR leader", "Other executive", "Board"];
 const TRIED = ["Engagement survey", "Coaching", "Reorg", "New hires", "Nothing yet"];
 const READINESS = [
-  "I'm the decision-maker and ready to move",
-  "I'm building the case internally",
+  "I’m the decision-maker and ready to move",
+  "I’m building the case internally",
   "Just exploring for now",
 ];
 
@@ -106,8 +106,8 @@ export default function LeadForm({ context }: { context?: string }) {
       <div className="lead-form">
         <p className="sent-title">Received.</p>
         <p className="form-status" role="status">
-          Cheryl reads every one of these herself. If it looks like a fit, you&apos;ll hear back
-          quickly. If we&apos;re not the right people, we&apos;ll tell you that too.
+          Cheryl reads every one of these herself. If it looks like a fit, you&rsquo;ll hear back
+          quickly. If we&rsquo;re not the right people, we&rsquo;ll tell you that too.
         </p>
       </div>
     );
@@ -178,12 +178,12 @@ export default function LeadForm({ context }: { context?: string }) {
             onChange={setReadiness}
           />
           <div className="field">
-            <label htmlFor="lf-msg">What&apos;s the thing you haven&apos;t said out loud yet?</label>
+            <label htmlFor="lf-msg">What&rsquo;s the thing you haven&rsquo;t said out loud yet?</label>
             <textarea
               id="lf-msg"
               rows={4}
               required
-              placeholder="Say it plainly. That's how we work here."
+              placeholder="Say it plainly. That’s how we work here."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
@@ -200,7 +200,7 @@ export default function LeadForm({ context }: { context?: string }) {
       )}
 
       <p className="form-status" role="status">
-        {status === "error" && "That didn't go through. Please email info@fgtsco.com directly."}
+        {status === "error" && "That didn’t go through. Please email info@fgtsco.com directly."}
       </p>
     </form>
   );

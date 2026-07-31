@@ -38,10 +38,10 @@ const QUESTIONS: Question[] = [
     options: [
       { text: "It gets argued openly, decided, and everyone commits.", score: 0 },
       { text: "It gets discussed, then relitigated in hallways afterward.", score: 1 },
-      { text: "It doesn't surface. The real conversation happens elsewhere.", score: 2 },
+      { text: "It doesn’t surface. The real conversation happens elsewhere.", score: 2 },
     ],
     notes: [
-      "Conflict happens in the room. That's health.",
+      "Conflict happens in the room. That’s health.",
       "Decided, then relitigated. The classic pattern.",
       "The real meeting is happening after the meeting.",
     ],
@@ -64,7 +64,7 @@ const QUESTIONS: Question[] = [
     options: [
       { text: "Yes. Roles, managers, and culture would flex and hold.", score: 0 },
       { text: "Parts would hold. Parts would crack. I know which.", score: 1 },
-      { text: "Honestly, I don't know, and that worries me.", score: 2 },
+      { text: "Honestly, I don’t know, and that worries me.", score: 2 },
     ],
     notes: [
       "You know your foundation. Rare.",
@@ -80,21 +80,21 @@ const READS = [
     zone: "Holding",
     title: "The foundation is holding. Protect it on purpose.",
     read:
-      "Truth travels to you, your best people still care out loud, and hard conversations happen. That's rarer than you think, and it usually erodes quietly, not dramatically. The organizations that keep it treat culture as something they maintain, not something they have. This is the moment proactive work is cheapest.",
+      "Truth travels to you, your best people still care out loud, and hard conversations happen. That’s rarer than you think, and it usually erodes quietly, not dramatically. The organizations that keep it treat culture as something they maintain, not something they have. This is the moment proactive work is cheapest.",
   },
   {
     max: 6,
     zone: "Softening",
-    title: "The early pattern is here. You're catching it in time.",
+    title: "The early pattern is here. You’re catching it in time.",
     read:
-      "Something has started to soften. The truth arrives filtered, the spark is dimmer, decisions get relitigated in hallways. None of it looks like a crisis yet, which is exactly why it gets ignored. What you're describing is how every culture problem starts: slowly, politely, and in ways the usual fixes don't touch.",
+      "Something has started to soften. The truth arrives filtered, the spark is dimmer, decisions get relitigated in hallways. None of it looks like a crisis yet, which is exactly why it gets ignored. What you’re describing is how every culture problem starts: slowly, politely, and in ways the usual fixes don’t touch.",
   },
   {
     max: 10,
     zone: "Speaking",
-    title: "You already know. It's time someone said it out loud.",
+    title: "You already know. It’s time someone said it out loud.",
     read:
-      "Truth reaches you late, your best people are going quiet, and the real conversations are happening somewhere you're not. You don't need another engagement survey. You need someone to listen at every level, name what's actually happening, and tell you plainly. That is precisely the work we do.",
+      "Truth reaches you late, your best people are going quiet, and the real conversations are happening somewhere you’re not. You don’t need another engagement survey. You need someone to listen at every level, name what’s actually happening, and tell you plainly. That is precisely the work we do.",
   },
 ];
 
@@ -219,7 +219,7 @@ export default function Quiz({ initialAnswers = [] }: { initialAnswers?: number[
         <p className="read-body">{read.read}</p>
         <div className="result-cta">
           <p className="eyebrow" style={{ marginBottom: 14 }}>
-            Want to talk about what&apos;s behind it?
+            Want to talk about what&rsquo;s behind it?
           </p>
           <LeadForm context={context} />
         </div>

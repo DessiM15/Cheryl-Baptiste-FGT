@@ -274,9 +274,21 @@ section { padding-block: clamp(56px, 9vh, 96px); }
   content: ""; position: absolute; inset: 0; z-index: 1;
   background: var(--deep); mix-blend-mode: color; opacity: .82;
 }
+/* Shaped scrim: an elliptical calm field behind the copy, so the centre stays
+   readable while the edges of the frame keep their movement. The linear layer
+   underneath holds the header and the scroll cue. */
 .hero-film .media::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--deep) 68%, #000 10%), color-mix(in srgb, var(--deep) 46%, transparent) 45%, color-mix(in srgb, var(--deep) 74%, #000 8%));
+  background:
+    radial-gradient(ellipse 82% 64% at 50% 50%,
+      color-mix(in srgb, var(--deep) 84%, transparent) 0%,
+      color-mix(in srgb, var(--deep) 66%, transparent) 46%,
+      transparent 76%),
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--deep) 74%, #000 10%) 0%,
+      color-mix(in srgb, var(--deep) 40%, transparent) 38%,
+      color-mix(in srgb, var(--deep) 48%, transparent) 64%,
+      color-mix(in srgb, var(--deep) 80%, #000 8%) 100%);
 }
 .hero-film .wrap { position: relative; z-index: 2; }
 .hero-stack {
@@ -287,14 +299,22 @@ section { padding-block: clamp(56px, 9vh, 96px); }
   font-size: clamp(38px, 5.6vw, 64px); max-width: 20ch;
 }
 .hero-film h1 em { color: var(--on-deep); }
-.hero-film .eyebrow { color: var(--on-deep-soft); }
-.hero-film .lede { color: var(--on-deep-soft); margin-top: 0; max-width: 52ch; font-size: clamp(15px, 1.8vw, 18px); }
+/* Small copy sits at full strength here, not the muted tan: over moving
+   footage the tan drops under the contrast floor on the brighter frames. */
+.hero-film .eyebrow { color: color-mix(in srgb, var(--on-deep) 94%, transparent); }
+.hero-film .lede {
+  color: var(--on-deep); margin-top: 0; max-width: 50ch;
+  font-size: clamp(16px, 1.9vw, 19px); line-height: 1.7;
+}
+.hero-film h1, .hero-film .lede, .hero-film .eyebrow {
+  text-shadow: 0 1px 18px color-mix(in srgb, #000 42%, transparent);
+}
 .hero-film .cta-row { margin-top: 12px; justify-content: center; }
 .hero-film .plumb line { stroke: var(--on-deep-soft); }
 .scroll-cue {
   position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 2;
   font-size: 10px; letter-spacing: .34em; text-transform: uppercase;
-  color: var(--on-deep-soft); font-weight: 600;
+  color: color-mix(in srgb, var(--on-deep) 88%, transparent); font-weight: 600;
   animation: cueFloat 2.6s ease-in-out infinite;
 }
 @keyframes cueFloat { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 8px); } }
@@ -314,25 +334,29 @@ section { padding-block: clamp(56px, 9vh, 96px); }
 .svc-panel {
   position: relative; overflow: hidden; color: var(--on-deep);
   min-height: clamp(420px, 72vh, 640px);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: flex-end; justify-content: center;
 }
 .svc-panel .bg { position: absolute; inset: 0; }
 .svc-panel .bg img { transition: transform 1.4s cubic-bezier(.2, .6, .2, 1); }
 .svc-panel:hover .bg img { transform: scale(1.05); }
 .svc-panel .bg::before {
   content: ""; position: absolute; inset: 0; z-index: 1;
-  background: var(--deep); mix-blend-mode: color; opacity: .78;
+  background: var(--deep); mix-blend-mode: color; opacity: .7;
 }
+/* Bottom-up scrim rather than a flat wash: the copy gets a genuinely dark
+   base to sit on and the top of the photograph keeps its detail. */
 .svc-panel .bg::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
-  background: color-mix(in srgb, var(--deep) 52%, #000 8%); opacity: .74;
-  transition: opacity .5s ease;
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--deep) 22%, transparent) 0%,
+    color-mix(in srgb, var(--deep) 36%, transparent) 40%,
+    color-mix(in srgb, var(--deep) 76%, #000 6%) 76%,
+    color-mix(in srgb, var(--deep) 92%, #000 10%) 100%);
 }
-.svc-panel:hover .bg::after { opacity: .6; }
 .svc-panel .content {
-  position: relative; z-index: 2; text-align: center;
-  display: flex; flex-direction: column; align-items: center; gap: 16px;
-  padding: 48px 30px; max-width: 340px;
+  position: relative; z-index: 2; text-align: left;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
+  padding: 40px 28px 44px; max-width: 360px;
 }
 .svc-panel .mark { height: 30px; display: flex; align-items: flex-end; color: var(--on-deep); }
 .svc-panel .mark line { stroke: var(--on-deep); }
@@ -351,6 +375,9 @@ section { padding-block: clamp(56px, 9vh, 96px); }
 .diag-band h2 {
   font-family: var(--font-serif), Georgia, serif; font-weight: 400;
   font-size: clamp(26px, 4vw, 40px); margin-top: 12px; max-width: 26ch;
+}
+.diag-band .intro {
+  margin-top: 16px; max-width: 64ch; color: var(--on-deep-soft); font-size: 16px;
 }
 .diag-band .q {
   font-family: var(--font-serif), Georgia, serif; font-size: clamp(20px, 2.6vw, 26px);

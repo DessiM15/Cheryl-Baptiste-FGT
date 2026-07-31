@@ -22,21 +22,21 @@ export const metadata: Metadata = {
     template: "%s · FGT Solutions",
   },
   description:
-    "FGT Solutions is a people-strategy and leadership advisory firm led by Cheryl Baptiste. Organizational diagnostics, leadership coaching, team interventions, and fractional people leadership, for leaders who want the truth, clearly and without apology.",
+    "FGT Solutions helps founders, CEOs, and senior leaders understand what is really going on inside their organizations. Organizational diagnosis, leadership coaching, team and manager work, and fractional people leadership, led by Cheryl Baptiste.",
   openGraph: {
     title: "FGT Solutions · People Strategy & Leadership Advisory",
     description:
-      "We tell you the truth about your organization. Clearly and without apology.",
+      "When something is off, we tell you what’s actually happening.",
     url: "https://fgtsco.com",
     siteName: "FGT Solutions",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "FGT Solutions: We tell you the truth about your organization." }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "FGT Solutions: When something is off, we tell you what’s actually happening." }],
   },
   twitter: {
     card: "summary_large_image",
     title: "FGT Solutions · People Strategy & Leadership Advisory",
-    description: "We tell you the truth about your organization. Clearly and without apology.",
+    description: "When something is off, we tell you what’s actually happening.",
     images: ["/og.png"],
   },
   robots: { index: true, follow: true },
@@ -97,8 +97,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="sub">SOLUTIONS</div>
               </div>
               <nav aria-label="Footer">
-                <a href="/#services">What we do</a>
-                <a href="/#who">Who it&apos;s for</a>
+                <a href="/#services">How we help</a>
+                <a href="/#who">Who it&rsquo;s for</a>
                 <a href="/diagnostic">The Diagnostic</a>
                 <a href="/#contact">Contact</a>
               </nav>
