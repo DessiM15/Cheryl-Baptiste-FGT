@@ -76,7 +76,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           dangerouslySetInnerHTML={{
             __html:
-              `try{var p=localStorage.getItem("palette");if(p)document.documentElement.dataset.palette=p;}catch(e){}`,
+              `try{var p=localStorage.getItem("palette");if(p)document.documentElement.dataset.palette=p;}catch(e){}` +
+              // Runs before first paint so the browser never restores a
+              // half-scrolled position: a refresh always lands on the hero.
+              `try{if("scrollRestoration" in history)history.scrollRestoration="manual";}catch(e){}`,
           }}
         />
         <script
