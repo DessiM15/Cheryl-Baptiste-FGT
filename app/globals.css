@@ -370,7 +370,9 @@ section { padding-block: clamp(56px, 9vh, 96px); }
   font-size: clamp(22px, 1.9vw, 28px); line-height: 1.25;
 }
 .svc-panel .rule { width: 44px; height: 1px; background: var(--on-deep-soft); }
-.svc-panel p { font-size: 14.5px; color: var(--on-deep-soft); line-height: 1.7; }
+/* Full-strength white rather than the muted tan: this copy sits over
+   photography, where the tan reads as washed out at this size. */
+.svc-panel p { font-size: 15px; color: var(--on-deep); line-height: 1.7; }
 
 /* ---------- live diagnostic band ---------- */
 .diag-band { background: var(--deep); color: var(--on-deep); }
