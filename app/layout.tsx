@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Mulish } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
-import PalettePill from "@/components/PalettePill";
 
 const serif = Playfair_Display({
   subsets: ["latin"],
@@ -76,7 +75,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           dangerouslySetInnerHTML={{
             __html:
-              `try{var p=localStorage.getItem("palette");if(p)document.documentElement.dataset.palette=p;}catch(e){}` +
               // Runs before first paint so the browser never restores a
               // half-scrolled position: a refresh always lands on the hero.
               `try{if("scrollRestoration" in history)history.scrollRestoration="manual";}catch(e){}`,
@@ -125,8 +123,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </footer>
-
-        <PalettePill />
       </body>
     </html>
   );
