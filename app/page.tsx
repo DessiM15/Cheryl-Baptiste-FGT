@@ -434,7 +434,7 @@ export default function Home() {
                 entrepreneur.{" "}
                 <a
                   className="text-link"
-                  href="https://cherylbaptiste.com"
+                  href="https://www.cherylbaptiste.me"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

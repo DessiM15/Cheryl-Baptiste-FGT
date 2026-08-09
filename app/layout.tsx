@@ -112,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 >
                   LinkedIn
                 </a>
-                <a href="https://cherylbaptiste.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.cherylbaptiste.me" target="_blank" rel="noopener noreferrer">
                   Cheryl, personally →
                 </a>
               </nav>
