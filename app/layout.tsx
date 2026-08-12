@@ -53,7 +53,7 @@ const jsonLd = {
   name: "FGT Solutions",
   url: "https://fgtsco.com",
   email: "info@fgtsco.com",
-  areaServed: "US",
+  areaServed: "Worldwide",
   founder: {
     "@type": "Person",
     name: "Cheryl Baptiste",
@@ -65,7 +65,7 @@ const jsonLd = {
   },
   description:
     "People-strategy and leadership advisory firm: organizational diagnostics, leadership coaching, team interventions, and fractional people leadership.",
-  address: { "@type": "PostalAddress", addressRegion: "CA", addressCountry: "US" },
+  address: { "@type": "PostalAddress", addressCountry: "US" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -118,7 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </nav>
             </div>
             <div className="fineprint">
-              <span>© {new Date().getFullYear()} FGT Solutions · California</span>
+              <span>© {new Date().getFullYear()} FGT Solutions · Global</span>
               <span>We will tell you the truth. What happens next is yours to decide.</span>
             </div>
           </div>

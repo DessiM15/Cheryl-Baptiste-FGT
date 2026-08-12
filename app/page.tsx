@@ -160,7 +160,7 @@ export default function Home() {
           </video>
         </div>
         <div className="wrap hero-stack">
-          <p className="eyebrow">People Strategy · Leadership Advisory · California</p>
+          <p className="eyebrow">People Strategy · Leadership Advisory · Global</p>
           <h1>
             When something is off, we tell you <em>what&rsquo;s actually happening.</em>
           </h1>
