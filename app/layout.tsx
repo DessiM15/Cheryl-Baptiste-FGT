@@ -120,6 +120,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="fineprint">
               <span>© {new Date().getFullYear()} FGT Solutions · Global</span>
               <span>We will tell you the truth. What happens next is yours to decide.</span>
+              <span className="credit">
+                Website by{" "}
+                <a href="https://smartscaleagent.com/" target="_blank" rel="noopener noreferrer">
+                  Smart Scale
+                </a>
+                , LLC
+              </span>
             </div>
           </div>
         </footer>
